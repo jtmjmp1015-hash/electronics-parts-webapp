@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ part.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="detail-card">
+        <h1>{{ part.name }}</h1>
+        <p><strong>Category:</strong> {{ part.category }}</p>
+        <p><strong>Price:</strong> ¥{{ part.price }}</p>
+        <p><strong>Stock:</strong> {{ part.stock }}</p>
+        <p><strong>Description:</strong> {{ part.description }}</p>
+
+        <a href="{{ url_for('index') }}" class="back-link">← Back to List</a>
+    </div>
+</div>
+
+</body>
+</html>
